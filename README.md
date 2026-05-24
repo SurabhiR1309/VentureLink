@@ -27,7 +27,7 @@ This project demonstrates concepts of full-stack web development, authentication
 * Tailwind CSS
 * SQLite/MySQL
 
-# Objective:
+## Objective:
 To create a digital platform that helps entrepreneurs connect with investors efficiently, promotes startup visibility, and encourages innovation, collaboration, and business growth within the entrepreneurial ecosystem.
 
 # Note:
