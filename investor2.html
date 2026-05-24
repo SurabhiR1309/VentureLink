@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Investors</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-20">            
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+              <a href="/">
+                <img class="h-12 w-auto" src="images/logo.png" alt="VentureLink" />
+              </a>
+            </div>
+      
+            <!-- Navigation -->
+            <nav>
+              <ul class="md:flex space-x-8 text-gray-700 font-medium">
+                <li><a href="home.html" class="hover:text-orange-600">Home</a></li>
+                <li><a href="startup.html" class="hover:text-orange-600">Startups</a></li>
+                <li><a href="investors.html" class="hover:text-orange-600">Investors</a></li>
+                <li><a href="schemes.html" class="hover:text-orange-600">Government Schemes</a></li>
+                <li><a href="login.html"><button class="bg-orange-600 text-white px-4  rounded-full hover:bg-orange-700 transition duration-300">
+                    Login
+                  </button></a>
+                </li>
+                <li><a href="register.html"><button class="bg-orange-600 text-white px-4  rounded-full hover:bg-orange-700 transition duration-300">
+                    Register
+                  </button></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+    </header>
+    <header class="bg-green-700 text-white py-6 text-center">
+        <h1 class="text-3xl font-bold">Investor Profile</h1>
+        <p class="text-sm mt-1">Detailed information about the investor</p>
+      </header>
+    
+      <main class="max-w-5xl mx-auto p-6 mt-10 bg-white rounded-lg shadow">
+        <!-- Investor Basic Info -->
+        <section class="flex flex-col md:flex-row gap-6 items-start">
+          <div class="flex-shrink-0">
+            <img src="images/investor-2-1.jpg" alt="Investor Image" class="rounded-full w-40 h-40 object-cover shadow-md" />
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-green-700">Charmi Chavda</h2>
+            <p class="text-sm text-gray-600">Location: Ahmedabad, India</p>
+            <p class="mt-3 text-gray-700">Charmi Chavda is the CEO and Managing Director of Rchitrix Digital Solution, a forward-thinking tech and media firm focused on empowering digital-first initiatives led by youth and grassroots innovators. With a strong background in digital transformation and content ecosystems, Charmi is known for supporting student-led ventures that create social impact through knowledge-sharing and online platforms. Her mission is to amplify informed voices that can drive real societal change.</p>
+          </div>
+        </section>
+    
+        <!-- Interest Areas -->
+        <section class="mt-10">
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Interest Areas</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-1">
+            <li>Youth-led Digital Platforms</li>
+            <li>Edutainment & Knowledge Sharing</li>
+            <li>Social Impact Startups</li>
+            <li>Online Learning Communities</li>
+          </ul>
+        </section>
+    
+        <!-- Investments Made -->
+        <section class="mt-10">
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Investments Made</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+              <h4 class="font-bold text-green-600">The Insight Lounge</h4>
+              <p class="text-sm text-gray-600">Allocated ₹12,00,000 in funding to support a student-driven online platform offering curated insights across various domains aimed at enriching societal understanding and promoting knowledge-sharing.</p>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+              <h4 class="font-bold text-green-600">ThinkVerse</h4>
+              <p class="text-sm text-gray-600">₹10,50,000 invested in a digital magazine startup that empowers college students to publish research, op-eds, and thought leadership content for a global audience.</p>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+              <h4 class="font-bold text-green-600">BrainHive</h4>
+              <p class="text-sm text-gray-600">₹8,00,000 provided for a podcast and video platform designed to simplify complex societal and economic topics for youth audiences.</p>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+              <h4 class="font-bold text-green-600">LearnSocio</h4>
+              <p class="text-sm text-gray-600">₹9,25,000 seed funding to develop interactive content and micro-courses focused on civic awareness, sustainability, and social innovation.</p>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+              <h4 class="font-bold text-green-600">NextGenView</h4>
+              <p class="text-sm text-gray-600">₹11,00,000 contributed toward a platform featuring youth panels, blogs, and expert interviews on emerging trends in tech, education, and global citizenship.</p>
+            </div>
+          </div>
+        </section>
+    
+        <!-- Optional Contact Button -->
+        <div class="mt-10 text-center">
+          <a href="/contact-investor.html?name=Amit%20Mehra" class="inline-block px-6 py-2 bg-green-600 text-white font-medium rounded-lg hover:bg-blue-700 transition">Contact Amit</a>
+        </div>
+      </main>
+    
+      <footer class="bg-green-700 text-white text-center py-6 mt-12">
+        <p class="text-sm">© 2025 VentureLink</p>
+      </footer>
+</body>
+</html>

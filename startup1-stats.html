@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>PramukhamArt Statistics</title>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-20">            
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+              <a href="/">
+                <img class="h-12 w-auto" src="images/logo.png" alt="VentureLink" />
+              </a>
+            </div>
+      
+            <!-- Navigation -->
+            <nav>
+              <ul class="md:flex space-x-8 text-gray-700 font-medium">
+                <li><a href="home.html" class="hover:text-orange-600">Home</a></li>
+                <li><a href="startup.html" class="hover:text-orange-600">Startups</a></li>
+                <li><a href="investors.html" class="hover:text-orange-600">Investors</a></li>
+                <li><a href="schemes.html" class="hover:text-orange-600">Government Schemes</a></li>
+                <li><a href="login.html"><button class="bg-orange-600 text-white px-4  rounded-full hover:bg-orange-700 transition duration-300">
+                    Login
+                  </button></a>
+                </li>
+                <li><a href="register.html"><button class="bg-orange-600 text-white px-4  rounded-full hover:bg-orange-700 transition duration-300">
+                    Register
+                  </button></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+    </header>
+
+    <header class="bg-yellow-500 text-white py-6 text-center">
+        <h1 class="text-3xl font-bold">PramukhamArt Statistics</h1>
+        <p class="text-sm mt-1">Performance overview of the startup</p>
+      </header>
+    
+      <section class="max-w-6xl mx-auto px-4 py-12">
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <!-- Stat cards -->
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-semibold text-yellow-600">Funding Raised</h2>
+            <p class="text-3xl font-bold">₹<span id="funding">0</span></p>
+            <p class="text-sm text-gray-600">Seed round from angel investors</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-semibold text-yellow-600">Customers</h2>
+            <p class="text-3xl font-bold"><span id="users">0</span>+</p>
+            <p class="text-sm text-gray-600">Customers across the Globe</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-semibold text-yellow-600">Monthly Revenue</h2>
+            <p class="text-3xl font-bold">₹<span id="revenue">0</span></p>
+            <p class="text-sm text-gray-600">Artworks Sales</p>
+          </div>
+          <!-- <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-semibold text-yellow-600">Partnerships</h2>
+            <p class="text-3xl font-bold"><span id="partners">0</span></p>
+            <p class="text-sm text-gray-600">NGOs and government tie-ups</p>
+          </div> -->
+        </div>
+    
+        <!-- Charts -->
+        <div class="bg-white p-6 rounded-lg shadow mb-8">
+          <h3 class="text-xl font-semibold text-gray-700 mb-4">User Growth Over Time</h3>
+          <!-- <canvas id="userGrowthChart" height="200"></canvas> -->
+          <img src="images/PRAMUKHAMART-2.png" alt="Product Image" class="rounded-lg shadow-md mb-6 ">
+        </div>
+    
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold text-gray-700 mb-4">Product Revenue Distribution</h3>
+          <canvas id="revenueChart" height="200"></canvas>
+          <img src="images/PRAMUKHAMART-3.png" alt="Product Image" class="rounded-lg shadow-md mb-6 ">
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold text-gray-700 mb-4">Monthly Revenue Distribution</h3>
+          <canvas id="revenueChart" height="200"></canvas>
+          <img src="images/PRAMUKHAMART-1.png" alt="Product Image" class="rounded-lg shadow-md mb-6 ">
+        </div>
+      </section>
+    
+      <footer class="bg-yellow-500 text-white text-center py-6">
+        <p class="text-sm">© 2025 VentureLink</p>
+      </footer>
+    
+      <script>
+        // Dynamic values (these can later be fetched from a JSON file or API)
+        const stats = {
+          funding: 85000,
+          users: 1200,
+          revenue: 90000,
+          partners: 5,
+          growthMonths: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+          growthData: [500, 2200, 4500, 8900, 12000],
+          revenueSources: ['Device Sales', 'Subscriptions', 'Consulting'],
+          revenueData: [60, 30, 10]
+        };
+    
+        // Insert stats dynamically
+        document.getElementById('funding').textContent = stats.funding.toLocaleString();
+        document.getElementById('users').textContent = stats.users;
+        document.getElementById('revenue').textContent = stats.revenue.toLocaleString();
+        document.getElementById('partners').textContent = stats.partners;
+    
+        // Chart 1: User Growth Over Time
+        new Chart(document.getElementById('userGrowthChart'), {
+          type: 'line',
+          data: {
+            labels: stats.growthMonths,
+            datasets: [{
+              label: 'Users Onboarded',
+              data: stats.growthData,
+              borderColor: '#facc15',
+              backgroundColor: 'rgba(234, 179, 8, 0.2)',
+              tension: 0.3,
+              fill: true,
+            }]
+          },
+          options: {
+            responsive: true,
+            scales: {
+              y: { beginAtZero: true }
+            }
+          }
+        });
+    
+        // Chart 2: Revenue Distribution
+        new Chart(document.getElementById('revenueChart'), {
+          type: 'doughnut',
+          data: {
+            labels: stats.revenueSources,
+            datasets: [{
+              label: 'Revenue',
+              data: stats.revenueData,
+              backgroundColor: ['#3b82f6', '#10b981', '#f59e0b']
+            }]
+          },
+          options: {
+            responsive: true,
+            cutout: '70%'
+          }
+        });
+      </script>
+</body>
+</html>
