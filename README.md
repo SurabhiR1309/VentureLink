@@ -8,7 +8,7 @@ The platform also includes direct interaction and communication features between
 
 This project demonstrates concepts of full-stack web development, authentication systems, database management, responsive UI/UX design, and real-world problem solving using technology.
 
-#Features:
+## Features:
 * Startup and investor registration system
 * Entrepreneur profile and startup showcase
 * Investment requirement and business statistics display
@@ -17,7 +17,7 @@ This project demonstrates concepts of full-stack web development, authentication
 * Responsive and interactive user interface
 * Authentication and profile management system
 
-#Tech Stack:
+## Tech Stack:
 * Django
 * Python
 * HTML
@@ -27,7 +27,7 @@ This project demonstrates concepts of full-stack web development, authentication
 * Tailwind CSS
 * SQLite/MySQL
 
-#Objective:
+# Objective:
 To create a digital platform that helps entrepreneurs connect with investors efficiently, promotes startup visibility, and encourages innovation, collaboration, and business growth within the entrepreneurial ecosystem.
 
 # Note:
